@@ -61,6 +61,21 @@ function App() {
     }
   }
 
+  const zerar = () => {
+    setNotaDuzentos(0);
+    setNotaCem(0);
+    setNotaCinquenta(0);
+    setNotaVinte(0);
+    setNotaDez(0);
+    setMoedaCinco(0);
+    setNotaDois(0);
+    setMoedaUm(0);
+    setMoedaCinquenta(0);
+    setMoedaVinteECinco(0);
+    setMoedaDez(0);
+    setNotaCinco(0);
+  }
+
   function somatorio() {
     return (notaDuzentos * 200 + notaCem * 100 + notaCinquenta * 50 + notaVinte * 20 + notaDez * 10 + notaCinco * 5 + notaDois * 2 + moedaUm * 1 + moedaCinquenta * 0.50 + moedaVinteECinco * 0.25 + moedaDez * 0.1 + moedaCinco * 0.05).toFixed(2);
   }
@@ -146,6 +161,7 @@ function App() {
         </div>
         <div className='total-content'>
           <span>Total: R$ {somatorio()}</span>
+          <button onClick={zerar}>Zerar Contador</button>
         </div>
       </div>
 
