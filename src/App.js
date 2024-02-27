@@ -62,92 +62,93 @@ function App() {
   }
 
   function somatorio() {
-    return notaDuzentos * 200 + notaCem * 100 + notaCinquenta * 50 + notaVinte * 20 + notaDez * 10 + notaCinco * 5 + notaDois * 2 + moedaUm * 1 + moedaCinquenta * 0.50 + moedaVinteECinco * 0.25 + moedaDez * 0.1 + moedaCinco * 0.05;
+    return (notaDuzentos * 200 + notaCem * 100 + notaCinquenta * 50 + notaVinte * 20 + notaDez * 10 + notaCinco * 5 + notaDois * 2 + moedaUm * 1 + moedaCinquenta * 0.50 + moedaVinteECinco * 0.25 + moedaDez * 0.1 + moedaCinco * 0.05).toFixed(2);
   }
 
   return (
     <div className='App'>
-      <h1>Contador de Caixa</h1>
+      <h2>Contador de Caixa</h2>
       <div className='container'>
 
         <div className='content'>
-        <div className='card'>
+          <div className='card'>
             <label htmlFor='nota-duzentos'>R$ 200,00: </label>
             <input name='nota-duzentos' type='number' onChange={somaValor}></input>
-            <span> Total: R$ {notaDuzentos * 200}</span>
+            <span> Total: R$ {(notaDuzentos * 200).toFixed(2)}</span>
           </div>
           <div className='card'>
             <label htmlFor='nota-cem'>R$ 100,00: </label>
             <input name='nota-cem' type='number' onChange={somaValor}></input>
-            <span> Total: R$ {notaCem * 100}</span>
+            <span> Total: R$ {(notaCem * 100).toFixed(2)}</span>
           </div>
 
           <div className='card'>
             <label htmlFor='nota-cinquenta'>R$ 50: </label>
             <input name='nota-cinquenta' type='number' onChange={somaValor}></input>
-            <span> Total: {notaCinquenta * 50}</span>
+            <span> Total: R$ {(notaCinquenta * 50).toFixed(2)}</span>
           </div>
 
           <div className='card'>
             <label htmlFor='nota-vinte'>R$ 20,00: </label>
             <input name='nota-vinte' type='number' onChange={somaValor}></input>
-            <span> Total: R$ {notaVinte * 20}</span>
+            <span> Total: R$ {(notaVinte * 20).toFixed(2)}</span>
           </div>
 
           <div className='card'>
             <label htmlFor='nota-dez'>R$ 10,00: </label>
             <input name='nota-dez' type='number' onChange={somaValor}></input>
-            <span> Total : R$ {notaDez * 10}</span>
+            <span> Total : R$ {(notaDez * 10).toFixed(2)}</span>
           </div>
 
           <div className='card'>
             <label htmlFor='nota-cinco'>R$ 5,00: </label>
             <input name='nota-cinco' type='number' onChange={somaValor}></input>
-            <span> Total: R$ {notaCinco * 5}</span>
+            <span> Total: R$ {(notaCinco * 5).toFixed(2)}</span>
           </div>
 
         </div>
 
         <div className='content'>
-        <div className='card'>
+          <div className='card'>
             <label htmlFor='nota-dois'>R$ 2,00:</label>
             <input name='nota-dois' type='number' onChange={somaValor}></input>
-            <span> Total: R$ {notaDois * 2}</span>
+            <span> Total: R$ {(notaDois * 2).toFixed(2)}</span>
           </div>
           <div className='card'>
             <label htmlFor='moeda-um'>R$ 1,00: </label>
             <input name='moeda-um' type='number' onChange={somaValor}></input>
-            <span> Total: R$ {moedaUm * 1}</span>
+            <span> Total: R$ {(moedaUm * 1).toFixed(2)}</span>
           </div>
 
           <div className='card'>
-            <label htmlFor='moeda-cinquenta'>Moedas de cinquenta centavos: </label>
+            <label htmlFor='moeda-cinquenta'>R$ 0,50: </label>
             <input name='moeda-cinquenta' type='number' onChange={somaValor}></input>
-            <span> Total de moedas de cinquenta centavos: {moedaCinquenta * 0.5}</span>
+            <span> Total: R$ {(moedaCinquenta * 0.5).toFixed(2)}</span>
           </div>
 
           <div className='card'>
-            <label htmlFor='moeda-vinte-e-cinco'>Moedas de vinte e cinco centavos: </label>
+            <label htmlFor='moeda-vinte-e-cinco'>R$ 0,25: </label>
             <input name='moeda-vinte-e-cinco' type='number' onChange={somaValor}></input>
-            <span> Total de moedas de vinte e cinco centavos: {moedaVinteECinco * 0.25}</span>
+            <span> Total: R$ {(moedaVinteECinco * 0.25).toFixed(2)}</span>
           </div>
 
           <div className='card'>
-            <label htmlFor='moeda-dez'>Moedas de dez centavos: </label>
+            <label htmlFor='moeda-dez'>R$ 0,10: </label>
             <input name='moeda-dez' type='number' onChange={somaValor}></input>
-            <span> Total de moedas de dez centavos: {moedaDez * 0.1}</span>
+            <span> Total: R$ {(moedaDez * 0.1).toFixed(2)}</span>
           </div>
 
           <div className='card'>
-            <label htmlFor='moeda-cinco'>Moedas de cinco centavos: </label>
+            <label htmlFor='moeda-cinco'>R$ 0,05: </label>
             <input name='moeda-cinco' type='number' onChange={somaValor}></input>
-            <span> Total de moedas de cinco centavos: {moedaCinco * 0.05}</span>
+            <span> Total: R$ {(moedaCinco * 0.05).toFixed(2)}</span>
           </div>
         </div>
+        <div className='total-content'>
+          <span>Total: R$ {somatorio()}</span>
+        </div>
       </div>
-      <div>
-        <span>Total: R$ {somatorio()}</span>
-      </div>
+
     </div>
   );
 }
