@@ -1,4 +1,5 @@
-import './App.css';
+import Navbar from './components/Navbar';
+import './styles/App.css';
 import { useState } from 'react';
 
 function App() {
@@ -82,9 +83,8 @@ function App() {
 
   return (
     <div className='App'>
-      <h2>Contador de Caixa</h2>
+      <Navbar/>
       <div className='container'>
-
         <div className='content'>
           <div className='card'>
             <label htmlFor='nota-duzentos'>R$ 200,00: </label>

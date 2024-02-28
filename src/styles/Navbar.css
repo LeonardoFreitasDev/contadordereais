@@ -1,0 +1,25 @@
+.navigation-bar {
+    display: flex;
+    background-color: blueviolet;
+    justify-content: space-between;
+    width: 100vw;
+    color: beige;
+}
+
+.navigation-bar p {
+    margin-left: 10px ;
+}
+
+.navigation-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    width: 10%;
+    margin-right: 10px;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: beige;
+}
